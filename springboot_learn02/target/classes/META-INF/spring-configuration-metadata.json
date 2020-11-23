@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "peros",
+      "type": "cn.sinven.bean.Peros",
+      "sourceType": "cn.sinven.bean.Peros"
+    }
+  ],
+  "properties": [
+    {
+      "name": "peros.age",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.birth",
+      "type": "java.util.Date",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.list",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.p",
+      "type": "cn.sinven.bean.page",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.pname",
+      "type": "java.lang.String",
+      "sourceType": "cn.sinven.bean.Peros"
+    },
+    {
+      "name": "peros.sex",
+      "type": "java.lang.String",
+      "sourceType": "cn.sinven.bean.Peros"
+    }
+  ],
+  "hints": []
+}

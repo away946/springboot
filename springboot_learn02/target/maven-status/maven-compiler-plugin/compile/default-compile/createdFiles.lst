@@ -1,0 +1,6 @@
+META-INF\spring-configuration-metadata.json
+cn\sinven\controller\Hellocontroller.class
+cn\sinven\service\springBootService.class
+cn\sinven\bean\page.class
+cn\sinven\bean\Peros.class
+cn\sinven\SpringbootLearn02Application.class

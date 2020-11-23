@@ -1,0 +1,18 @@
+peros:
+  pname: "版本 \n"
+  sex: 男
+  age: 20
+  map: {k1: v1, k2: v2}
+  list:
+    - 1
+    - 2
+    - 3
+  boss: true
+  p:
+    name: 发过火
+    sex: 公
+    age: 1
+  birth: 20000/12/3
+#spring:
+#  activemq:
+#    prod

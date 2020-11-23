@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" th:href="@{/favicon1.ico}"/>
+    <link rel="bookmark" th:href="@{/favicon1.ico}"/>
+    <link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.css}" href="asserts/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/asserts/css/dashboard.css}" href="asserts/css/signin.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="comments/comment :: #tagbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="~{comments/comment::sidebar(list='emps')}"></div>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <a class="btn btn-sm btn-info" th:href="@{/emps}">《--返回</a>
+<form method="post" th:action="@{/addemps}">
+    <input type="hidden" name="_method" value="put" th:if="${emps!=null}">
+    <input type="hidden" name="id" th:value="${emps!=null}?${emps.id}" th:if="${emps!=null}">
+    <div class="form-row">
+        <div class="col-md-8 mb-4">
+            <label for="validationServer01">Last name</label>
+            <input name="lastName" type="text" th:value="${emps!=null}?${emps.lastName}"  class="form-control is-valid" placeholder="Mark" id="validationServer01"  required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-8 mb-4">
+            <label for="validationServer02">email</label>
+            <input name="email" type="email" th:value="${emps!=null}?${emps.email}" class="form-control is-valid" placeholder="lj@qq.com" id="validationServer02"  required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="gender" th:checked="${emps!=null}?${emps.gender==1}" id="inlineRadio1" value="1" checked>
+        <label class="form-check-label" for="inlineRadio1">男</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" th:checked="${emps!=null}?${emps.gender==0}" name="gender" id="inlineRadio2" value="0">
+        <label class="form-check-label" for="inlineRadio2">女</label>
+    </div>
+    <div class="form-row">
+        <div class="col-md-8 mb-4">
+            <label for="validationServer04">部门</label>
+            <select name="department.id" class="custom-select is-invalid" id="validationServer04" required>
+                <option th:selected="${emps!=null}?${emps.department.id==dep.getId()}"  th:each="dep:${deps}" th:text="${dep.getDepartmentName()}" th:value="${dep.id}">Choose...</option>
+
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+        <div class="col-md-8 mb-4">
+            <label for="validationServer05">出生日期</label>
+            <input name="birth" type="text" th:value="${emps!=null}?${#dates.format(emps.birth, 'yyyy-MM-dd HH:mm:ss')}" placeholder="2020-2-29" class="form-control is-invalid" id="validationServer05" required>
+            <div class="invalid-feedback" >
+                Please provide a valid zip.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <button class="btn btn-primary"  th:text="${emps!=null}?'修改':'添加'" type="submit">添加</button>
+</form>
+
+        </main>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sinven.springbootweb.dao.EmployeeDao">
+<!--    public Employee getEmpById(Integer id);-->
+
+<!--    public void  insertEmp(Employee employee);-->
+    <select id="getEmpById" parameterType="int" resultType="cn.sinven.springbootweb.entity.Employee">
+        select * from employee where id=#{id}
+    </select>
+
+    <insert id="insertEmp">
+        insert  into employee values (null ,#{lastName},#{email},#{gender},#{dId},#{birth})
+    </insert>
+
+    <select id="findEmpAll" resultType="cn.sinven.springbootweb.entity.Employee">
+        select * from employee
+    </select>
+    <update id="editEmp"  >
+        update employee set lastName=#{lastName},email=#{email},gender=#{gender},d_id=#{dId},birth=#{birth} where id=#{id}
+    </update>
+
+    <delete id="delEmp" parameterType="int">
+        delete from employee where id=#{id}
+    </delete>
+
+</mapper>

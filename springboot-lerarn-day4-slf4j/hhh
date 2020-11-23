@@ -1,0 +1,8 @@
+2020-09-12 17:45:07.924  INFO 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : Starting SpringbootLerarnDay4Slf4jApplicationTests on PC-20200822DLEI with PID 2736 (started by Administrator in E:\全栈---罗军\springboot\springboot-lerarn-day4-slf4j)
+2020-09-12 17:45:07.925  INFO 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : No active profile set, falling back to default profiles: default
+2020-09-12 17:45:08.585  INFO 2736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-12 17:45:08.766  INFO 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : Started SpringbootLerarnDay4Slf4jApplicationTests in 1.005 seconds (JVM running for 1.677)
+2020-09-12 17:45:08.896  INFO 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : -------info级别-------
+2020-09-12 17:45:08.897  WARN 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : ------warn级别--------
+2020-09-12 17:45:08.897 ERROR 2736 --- [main] pringbootLerarnDay4Slf4jApplicationTests : ---------error级别----------
+2020-09-12 17:45:08.909  INFO 2736 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
